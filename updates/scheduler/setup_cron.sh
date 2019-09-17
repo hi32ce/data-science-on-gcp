@@ -2,10 +2,10 @@
 
 REGION='us-central1'
 PROJECT=$(gcloud config get-value project)
-BUCKET=cloud-training-demos-ml
+BUCKET=dsongcp_20190914
 
-URL="https://${REGION}-${PROJECT}.cloudfunctions.net/ingest_flights_udwaxx86mVygAmOazUcijW8zBXWNxEVM"
-TOKEN=changeme
+URL="https://${REGION}-${PROJECT}.cloudfunctions.net/ingest_flights_Fk3rjEC11ZyoFZJ08B4QgP5nhl2gTQOX"
+TOKEN="gyaudsha08p39phlcudai73hur929449ks"
 echo {\"bucket\":\"${BUCKET}\", \"token\":\"${TOKEN}\"} > /tmp/message
 
 gcloud pubsub topics create cron-topic

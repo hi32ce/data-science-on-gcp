@@ -18,13 +18,15 @@
 import logging
 from flask import escape
 from ingest_flights import *
+
+TOKEN = 'gyaudsha08p39phlcudai73hur929449ks'
  
-def ingest_flights(request):
+def ingest_flights_Fk3rjEC11ZyoFZJ08B4QgP5nhl2gTQOX(request):
    try:
       logging.basicConfig(format='%(levelname)s: %(message)s', level=logging.INFO)
       json = request.get_json()
       
-      if escape(json['token']) != 'DI8TWPzTedNF0b3B8meFPxXSWw6m3bKG':
+      if escape(json['token']) != TOKEN:
          logging.info('Ignoring request without valid token')
          return
 
