@@ -11,6 +11,7 @@ echo {\"bucket\":\"${BUCKET}\", \"token\":\"${TOKEN}\"} > /tmp/message
 gcloud pubsub topics create cron-topic
 gcloud pubsub subscriptions create cron-sub --topic cron-topic
 
+# details => https://cloud.google.com/sdk/gcloud/reference/scheduler/jobs/create/http?hl=ja
 gcloud scheduler jobs create http monthlyupdate \
        --schedule="8 of month 10:00" \
        --uri=$URL \
@@ -19,4 +20,6 @@ gcloud scheduler jobs create http monthlyupdate \
        --max-retry-duration=3h \
        --min-backoff=1h \
        --time-zone="US/Eastern" \
-       --message-body-from-file=/tmp/message
+       --message-body-from-file=/tmp/message \
+       --headers='Content-Type=application/json'
+
