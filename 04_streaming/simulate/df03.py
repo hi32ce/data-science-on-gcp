@@ -39,7 +39,7 @@ def as_utc(date, hhmm, tzone):
       else:
          return '' # empty string corresponds to canceled flights
    except ValueError as e:
-      print '{} {} {}'.format(date, hhmm, tzone)
+      print('{} {} {}'.format(date, hhmm, tzone))
       raise e
 
 def tz_correct(line, airport_timezones):
