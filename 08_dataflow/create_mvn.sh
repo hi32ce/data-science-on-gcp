@@ -1,7 +1,7 @@
 mvn archetype:generate \
-  -DarchetypeArtifactId=google-cloud-dataflow-java-archetypes-starter \
-  -DarchetypeGroupId=com.google.cloud.dataflow \
+  -DarchetypeArtifactId=beam-sdks-java-maven-archetypes-starter \
+  -DarchetypeGroupId=org.apache.beam \
   -DgroupId=com.google.cloud.training.flights \
-  -DartifactId=chapter8_temp \
+  -DartifactId=chapter8 \
   -Dversion="[1.0.0,2.0.0]" \
   -DinteractiveMode=false \
